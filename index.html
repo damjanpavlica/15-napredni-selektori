@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+        /* h1 {background-color: yellow;} */
+        /* h1 {background-color: red;} */
+       
+        div#a {background-color: green;}
+        #a {background-color: yellow;}
+        div[id=a] {background-color: blue;}
+/* ATRIBUTE SELECTOR */
+
+a[href*="Vrednost"]{
+    font-size: 24px;
+    color: red;
+}
+a[href]{
+    text-decoration: none;
+}
+a[href*="Vrednost"]{
+    font-size: 24px;
+    color: red;
+}
+a[href~="sadrzi"]{
+  color:yellow;
+}
+a[href^="pocinje"]{
+  color:orangered;
+}
+a[href$="l"]{
+  color:green;
+}
+a[href="acnaVrednost"]{
+  color:purple;
+}
+input[name="test"]:focus{
+    background-color:red;
+    color:bisque;
+    text-align: right !important;
+}
+#firstChild :first-child{
+    border:1px solid red;
+
+}
+#firstChild p:last-child{
+    border:1px solid green;
+}
+</style>
+<style>
+    #content h1 {
+        color: yellow;
+    }
+</style> 
+<body>
+    
+        
+        <!-- <h1>HELLO</h1> -->
+        
+        <div id="content">
+            <h1>FROM CONTENT</h1>
+        </div>
+    <!-- <h1>NAPREDNI SELEKTORI</h1> -->
+    <div id="firstChild">
+    <ul>Prvo dete
+        <li><a href="tacnaVrednost" >Selektujemo po tacnoj vrednosti</a></li>
+        <li><a href="sadrzi rec">Selektujemo po reci</a></li>
+            <li> <a href="pocinje sa">Selektujemo po vrednosti prve reci</a></li>
+                <li> <a href="zavrsava se sa html">Selektujemo po vrednosti zadnje reci</a></li>
+                    <li><a href="pocinje sa">Selektujemo po vrednosti prve reci</a></li>
+    </ul>
+    <p>Drugo dete</p>
+    <p>Zadnje dete</p>
+    </div>
+    <span>Gadjamo focus inputa</span><br><br>
+    <input type="text" name="test"/>
+</body>
+</html>
